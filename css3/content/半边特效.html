@@ -1,0 +1,17 @@
+<span value="渡">渡</span><span value="一">一</span><span value="教">教</span>
+<style>
+    span {
+        color: indianred;
+         position: relative;
+    }
+    
+    span::after {
+        content: attr(value);
+        width: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #4CAF50;
+    }
+</style>

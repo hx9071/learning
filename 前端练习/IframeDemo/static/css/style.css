@@ -1,0 +1,7 @@
+/*解决boostrap table插件高度被撑破问题*/
+/*.fixed-table-body{*/
+    /*overflow-x: auto;*/
+    /*overflow-y: auto;*/
+    /*height: 90%;*/
+/*}*/
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+    var name='全局变量';
+    function fun(){
+        //使根据调用者的变量属性，来找
+        //不加this时，则会去找本函数上一级的变量
+        console.log(this.name);
+    }
+        var obj = {
+            name:"局部变量1",
+            sayname:fun
+        };
+    var obj2 = {
+        name:"局部变量2",
+        sayname:fun
+    };
+        obj.sayname();
+        obj2.sayname();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

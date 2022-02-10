@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		body,p{margin: 0;}
+		ul{margin: 0;padding: 0;list-style: none;}
+	a{text-decoration: none;color: inherit;}
+		input{margin: 0;padding: 0;border:none;}
+	.box{width:572px;border:1px solid #999;font:14px "微软雅黑";overflow:hidden;}
+	.nav-tit{
+		margin-left: -1px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		background-color: #f1f1f1;
+		overflow: hidden;
+		}
+	.nav-titI{box-sizing: border-box;float: left;width: 33.333%;border-left: 1px solid #cecece;border-bottom: 1px solid #cecece;cursor: pointer;}
+	.nav-txt{height: 200px;}
+	.nav-txtI{height: 200px;display:block;width: 100%;text-indent: 2em; line-height: 2;}
+	/*重点内容*/
+	.nav-txt{overflow: hidden;}
+	.nav-titI:hover{background-color: #fff;border-bottom:none;}
+</style>
+	</head>
+	<body>
+		<div class="box">
+    <nav class="nav-tit">
+        <label class="nav-titI" for="kc">课程</label>
+        <label class="nav-titI" for="xx">学习计划</label>
+        <label class="nav-titI" for="jn">技能图谱</label>
+    </nav>
+    <nav class="nav-txt">
+        <input class="nav-txtI nav-txtI_active" id="kc" value="课程内容" readonly>
+        <input class="nav-txtI" id="xx" value="学习计划内容" readonly>
+        <input class="nav-txtI" id="jn" value="技能图谱内容" readonly>
+    </nav>
+</div>
+	</body>
+</html>

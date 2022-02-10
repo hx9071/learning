@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 作用：隐藏实现 不会影响污染全局命名空间 可以用来编写js模块
+    (function () { // 匿名函数自调用
+        var a=1
+        function test() {
+            console.log(++a)
+        }
+        // 暴露匿名函数中的内容
+       // window.$=function (){
+       //      return {test: test}
+       // }
+            window.$={
+                test: test
+            }
+    }()
+    )
+    $.test()
+</script>
+</html>

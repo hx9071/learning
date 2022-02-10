@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">测试</button>
+</body>
+<script>
+    //什么样的函数是回调函数
+    // 1.自定义 没有调用 但是最执行了
+    // 常见的回调函数
+    // 1.dom事件回调函数
+    // 2.定时器回调函数
+    // 3.ajax请求回调函数
+    // 4.生命周期回调函数
+    document.getElementById('btn').onclick=function(){
+        alert(this.innerHtml)
+    }
+    setTimeout(function(){
+        alert('延时定时器执行')
+    },3000)
+    // 超时定时器
+    // 延时定时器
+</script>
+</html>

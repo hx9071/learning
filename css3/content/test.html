@@ -1,0 +1,16 @@
+<div>1</div>
+<style>
+    div::before{
+        content:'\00A3'; /* 浏览器自己支持的  浏览器支持的css编码 */
+        /*
+        content:url(""); // 只能引入图片 不能改变大小类似background-img属性
+        content: attr(href) // 可以贴http路径
+        content 是否能用js选中
+         */
+        /* 只能用在伪元素里*/
+        display: inline-block;
+        /**
+
+         */
+    }
+</style>

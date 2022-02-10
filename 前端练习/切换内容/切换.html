@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		.district_experience_share {
+			margin-bottom: 10px;
+			}
+    .tab {
+      white-space: nowrap;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      border-bottom: 0.5px solid #ddd;
+      ul {
+        height: 44px;
+        line-height: 44px;
+        font-size: 14px;
+        display: flex;
+        li {
+          display: inline-block;
+          flex: 1;
+          position: relative;
+          text-align: center;
+          max-width: 50%;
+          cursor: pointer;
+          margin-left: 15px;
+          &:first-child {
+            margin-left: 15px;
+          }
+          &:last-child {
+            margin-right: 15px;
+          }
+          &.selected {
+            color: #49c114;
+            //导航区域底部下划线是通过伪类的绝对定位来实现的
+            &::after {
+              content: "";
+              height: 2px;
+              width: 100%;
+              background: #49c114;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tab_box {
+    padding-bottom: 5px;
+    display: none;
+    &.selected {
+      display: block;
+    }
+    ul > li {
+      border-bottom: none;
+      padding: 0;
+      border-radius: 5px;
+      vertical-align: top;
+      white-space: normal;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+  }
+	</style >
+		
+	</head>
+	<body>
+		<div class="district_experience_share white_vessel">
+   <div class="tab">
+   <!-- //tab是区域部分的导航(运用到了 滑动的效果，这种操作看起还是很方便的) -->
+      <ul>
+        <li class="selected">最热</li>
+        <li>徐汇区</li>
+        <li>闵行区</li>
+        <li>静安区</li>
+        <li>虹口区</li>
+        <li>浦东新区</li>
+        <li>青浦区</li>
+        <li>长宁区</li>
+      </ul>
+  </div>
+
+ <!-- //这里是点击导航区域显示的内容块 -->
+  <div class="tab-content-list">
+      <div class="tab_box selected">
+        <ul>
+          <li>
+            <a href="">
+              <div class="user_content">
+                <!-- //这里是切换后展示部分的内容(也就是上图有颜色区域快部分展示的内容块，我就不写出来了)。。。 -->
+              </div>
+            </a>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="tab_box">
+        <ul>
+          <li>
+            <a href="">
+              <div class="user_content">
+                //这里是切换后展示部分的内容(也就是上图有颜色区域快部分展示的内容块，我就不写出来了)。。。
+              </div>
+            </a>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+  </div>
+</div>
+	</body>
+	<script>
+	 $(function () {
+    $(".district_experience_share .tab ul li").click(function() {
+      if ($(this).hasClass("selected")) {
+        return;
+      }
+      var $parent = $(this).parent();
+      var $tab_content_list = $('.district_experience_share .tab-content-list');
+      $('.selected', $parent).removeClass('selected');
+      $('.selected', $tab_content_list).removeClass('selected');
+      $(this).addClass('selected');
+      $('.tab_box', $tab_content_list).eq($(this).index()).addClass('selected');
+    });
+  });
+</script>
+</html>

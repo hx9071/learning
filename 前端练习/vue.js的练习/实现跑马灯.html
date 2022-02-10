@@ -1,0 +1,53 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>跑马灯的实现</title>
+    <title></title>
+  <!--  导入vue包-->
+    <script src="https://unpkg.com/vue/dist/vue.js" ></script>
+</head>
+<body>
+<!--创建要控制的区域-->
+    <div id="app">
+        <input type="button" value="1" @click="lang">
+        <input type="button" value="2">
+        <h1>{{msg}}</h1>
+    </div>
+
+    <script>
+        /*在vm实例中，如果想要获取data上的数据，或者 想要调用 Methods中的方法，必须通过this.数据属性名 或者 this.方法名进行方法
+        this 就代表我们new出来的vm实例对象*/
+        var vm = new Vue{
+            el:'#app',
+                    data :{
+                msg:'....'.
+                        intervalis =null    //在data上定义定时器的id
+            }
+            methods:{
+                lang(){
+                    var _this = this;
+                var intervalis =  setInterval(Function){
+                    console.log(_thisthis.msg)
+                    //获取到第一个字符
+                    var start=_this.mag.substring(0,1)
+                    var end=_this.mag.substring(1)
+                    //重新拼接得到新的字符串，并且赋值给this.msg
+                    _this.msg=end + start
+                //vm实例，会监听自己身上的data中所有数据的改变，只要数据一旦发生变化，就会自动把最新的数据，从data上同步到页面中去
+                    //不需要考虑如何渲染到页面
+                },400)
+            }
+
+        }
+
+       /* 1.给第一个按钮绑定一个点击事件  @  v-on
+        2.在按钮事件中写相关的业务逻辑代码
+        拿到msg字符串，然后调用字符串的substring来进行字符串的截取操作,把第一个字符截取出来，放到最后一个位置即可
+        3.为了实现点击按钮，自动截取的功能，需要把2中的代码放到定时器中去；
+        */
+    </script>
+</body>
+</html>

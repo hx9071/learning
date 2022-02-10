@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var phonestr="13345678911";
+    var phonereg=/1[3-9][0-9]{9}/;
+    var zhuanyi=/\\.\D/;
+    var zhuanyi2=new RegExp("123");
+    console.log(phonereg.test(phonestr));
+    console.log(zhuanyi.test("\\s....sssss"));
+    zhuanyi=/1[3,9]\d{9}/;
+    zhuanyi=/1[3-9][0-9]{9}/;
+    console.log(zhuanyi.test("15123456789"));
+
+    /*判断是否同时有.\*/
+    zhuanyi=/\.|\\/g;
+    console.log(zhuanyi.test("123456.\\"));
+
+    /* 1.    检查是否有单词child     */
+    zhuanyi=/child/;
+    /*          单词边界       */
+    zhuanyi=/\bchild\b/;
+
+    var str = prompt("请输入");
+    console.log(str);
+
+
+    /*去除所有输入的空格*/
+    str=str.replace(/\s/g , "");   /* \s 是查找空白字符，原本的是进行单项查找，要加上g 进行全局匹配
+    这个函数，前面的是被替换的内容，后面的是要替换的内容
+    但是这样全部去除了空格*/
+
+    console.log(str);
+
+    /* 去除前后的空格，只留中间的空格 */
+    str=str.replace(/^\s*/, "");
+    console.log(str);
+
+    str=str.replace(/\s*$/, "");
+    console.log(str);
+
+    str=str.replace(/^\s*|\s*$/g, "");
+    console.log(str);
+
+    var str = prompt("请输入电子邮件");
+    console.log(str);
+    var reg=/{[A-z]\.\_\d}@{[A-z]\d}.[A-z]{2-5}.[A-z]{2-5}/;
+
+    var reg=/^\w{3,}(\.\w+)*@ [A-z0-9]+（\.[A-z]{2,5}）{1,2}$/;
+    console.log(reg.test(str));
+</script>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;list-style: none;
+				}
+			body{
+		
+				background: url(img/background.png) ;
+				/*background: rgba(550,550,550,0.3);通过改变最后一个值来设置背景图片的透明度。 */
+				/*background-size: cover; ：background-size的cover特定值会保持图像本身的宽高比例，将图片缩放到正好完全覆盖定义背景的区域。 */
+				repeat: no-repeat;
+				background-attachment:fixed;
+				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='(img/register.jpg', sizingMethod='scale');
+				-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='(img/register.jpg', sizingMethod='scale');
+				background-size: cover;
+				-moz-background-size: cover;
+				-webkit-background-size: cover;
+			}
+			.header{
+				height: 70px;
+				background-color: white;
+			/* 	float:right;
+				color: white;
+				height: -50px; */
+			}
+			.header .mod-header a:link{
+				color: white;
+			}
+			.concle{
+				margin-top: 40px;
+				margin-right: 60px;
+				text-decoration:none;
+				float:right;
+				size: 8px;
+				color:#000000;
+			}
+			.concle:hover{
+				color:darkgray;
+			}
+				
+			.concle:active{
+				color:orangered;
+			}
+			.regist{	
+		width: 900px;
+		height:600px;
+		margin:0 auto;
+			}
+			.regist .headline{
+		font-size: 22px;
+		text-align: center;
+		padding: 10px;
+			}
+			.regist .index{
+		width: 350px;
+		height: 460px;
+		background-color:rgba(255,255,255,0.75);
+		/* margin: 150px 150px; */
+		margin:0 auto;
+		margin-top:100px ;
+			}
+			.astyle{
+		margin: 5px 0 5px 42px;
+		font-size:17px; 
+		color: #6a6f77;
+	}
+			input[type="text"],
+	input[type="submit"]{
+		-web-kit-appearance:none;
+	  	-moz-appearance: none;
+	  	display: block;
+	  	margin: 0 auto;
+	  	font-size:15px;
+	  	width: 240px;
+	}
+	input[type="text"]{
+		height:35px;
+		border-radius:3px;
+		border:1px solid #c8cccf;
+		color:#6a6f77;
+		outline:0;
+	}
+	input[type="submit"]{
+		margin-top: 25px;
+		height: 35px;
+		background: #357eb8;
+		color: #bcedff;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	input[type="submit"]:hover{
+		background: #0e62a3;
+		cursor: pointer;
+	}
+			</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="mod-header">
+			<!-- <a href="http://www.baidu.com/" style="display: block;">
+				<img src="/static/passpc-base/img/logo/baidu.gif" 
+				alt="logo"></a> -->
+				<a class="concle" href="http://127.0.0.1:8848/Black_box/login.html"> 我已注册,现在就登陆	</a>
+			</div>
+			</div>
+		<div class="regist">
+				<div class="index">
+					<form action="#" method="get">
+						<p class="headline">用户注册</p>
+						<p class="astyle">用户名：</p>
+						<input type="text" value="请输入您的用户名">
+						<p class="astyle">手机号码</p>
+						<input type="text" value="请输入您的手机号">
+						<p class="astyle">密码：</p>
+						<input type="text" value="请输入密码">
+						<p class="astyle">邮箱：</p>
+						<input type="text" value="请输入邮箱">
+						<input type="submit" value="立即注册" name="login" >
+						
+					</form>
+ 
+				</div>
+	</body>
+</html>

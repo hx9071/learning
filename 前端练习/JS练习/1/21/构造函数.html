@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+function createDog(name,age,gender){
+    //创建一个新的对象
+    /*     var obj = new object()
+    {
+        var name= a;
+        var age=b;
+    };*/
+    obj.name=name;
+    obj.age =age;
+    obj.gender = gender;
+    obj.sayname=function()
+    {
+    alert(this.name);
+    }
+    //将新对象返回
+    return obj;
+}
+    var DOG=createDog("旺财",12,"男");
+    DOG.sayname();
+    console.log(DOG);
+    /**
+     *创建一个构造函数，专门用来创建不同类型的对象
+     * 构造函数就是一个普通的函数，创建方式和普通函数没有区别
+     * 不同的是构造函数习惯首字母大写
+     *
+     * 构造函数和普通函数的区别就是调用方式的不用
+     *  普通函数就是直接调用，而构造函数需要使用new关键字调用
+     *  使用同一个构造函数创建的对象，称为一类对象，也将一个构造函数称为一个类
+     *  我们将一个构造函数创建的对象，称为是该类的实例
+     *  使用instanceof可以检查一个对象是否是一个类的实例
+     *  语法： 对象 instanceof 构造函数
+     *  如果是，则返回true，否则返回false
+     *  所有对象都是object的实例
+     *  所以所有的对象和Object做instanceid检查时都会返回true
+
+    function Person(name,age,gender){
+        name="sds";//这是向window中添加的
+        this.name=name;//这才是向对象中添加的
+        this.age=age;
+        this.gender=gender;
+        this.say = function()
+        {
+            alert(name);
+        };
+    }
+    var per = new Person("孙悟空",12,"男");
+
+    console.log(per);
+     */
+
+
+    /*
+    *  修改构造函数
+    *在person构造函数中，为每一个对象都添加了一个sayname方法
+    *   目前我们的方法是在构造函数内部创建的，
+    *       也就是构造函数每执行一次就会创建一个新的sqyname方法
+    *       也是所有实例的sayname都是唯一的
+    * */
+    function Person(name,age,gender){
+        name="sds";//这是向window中添加的
+         this.name=name;//这才是向对象中添加的
+        this.age=age;
+        this.gender=gender;
+        this.say = function()
+        {
+          alert(this.name);
+        };
+        //
+    }
+    //创建一个person的实例
+    var per=new Person(1,2,3);
+    per.say();
+
+
+    </script>
+</html>

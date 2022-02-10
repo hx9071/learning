@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作二级导航菜单</title>
+    <!-- <link rel="stylesheet"  href="C:\Users\zhaodada\Desktop\js\style1.css"> -->
+    <style type="text/css">
+        #menu{
+            width: 100px;
+            border: 1px solid #999;
+
+
+        }
+        #menu ul{
+            margin:0px;
+            padding: 0px;
+            list-style:none; 
+        }
+        #menu ul li{
+            background:#06c;
+            height:26px;
+            line-height:26px;
+            text-align:center;
+            border-bottom:1px solid #999;
+            position: relative;
+        }
+        a{
+            display:block;
+            font-size:13px;
+            color: #fff;
+            text-decoration:none;
+        }
+        a:hover{
+            color:#f00;
+            font-size:14px;
+        }
+        /*创建二级菜单*/
+        #menu ul li ul{
+            display: none;
+            top: 0px;
+            width: 130px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            position: absolute;
+            left: 100px;
+        }
+        #menu ul li:hover ul{
+            display: block;
+        }
+        #menu ul li :hover ul li a{
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="">HTML</a></li>
+        <li><a href="">CSS</a>
+            <ul>
+                <li><a href="">Selector</a></li>
+                <li><a href="">Use CSS File in HTML</a></li>
+                <li><a href="">Formatting Document</a></li>
+                <li><a href="">Layout</a></li>
+            </ul>
+        </li>
+        <li><a href="">JavaScript</a></li>
+        <li><a href="">XML</a></li>
+        <li><a href="">PHP</a></li>
+        <li><a href="">Ajax</a></li>
+    </ul>
+</div>
+</body>
+</html>
+---------------------
+作者：wutrg1502
+来源：CSDN
+原文：https://blog.csdn.net/wutrg1502/article/details/79162537
+版权声明：本文为博主原创文章，转载请附上博文链接！

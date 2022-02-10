@@ -1,0 +1,46 @@
+<!-- <div class="box">
+    <div>
+        <img src="../img/mm1.png">
+    </div>
+</div>
+<style>
+    .box {
+        display: flex;
+        z-index: auto;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .box>div {
+        background-color: blue;
+        z-index: 1;
+    }
+    /* 此时该div是普通元素，z-index无效 */
+    
+    .box>div>img {
+        position: relative;
+        z-index: -1;
+        right: -150px;
+        /* 注意这里是负值z-index */
+    }
+</style> -->
+<img src="../img/天空.jpg" class="mode">
+<div class="box">
+    <img src="../img/mm1.png">
+</div>
+<style>
+    .mode {
+        /* 竖妹子绝对定位，同时混合模式 */
+        position: absolute;
+        mix-blend-mode: darken;
+    }
+    
+    .box {
+        background: blue;
+    }
+    
+    .box>img {
+        position: relative;
+        z-index: -1;
+    }
+</style>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="application/javascript">
+
+        /*onload事件会在整个页面加载完成以后才触发
+         * 为window绑定一个onload事件
+         * 将内容放在里面，保证页面加载之后执行*/
+        window.onload=function(){
+
+            //获得按钮
+            var btn=document.getElementById("btn");
+
+            console.log(btn);
+
+            btn.innerHTML="123";
+
+            //为按钮绑定单击事件
+
+            btn.onclick=function(){
+
+            };
+
+        function myclicl(id,fun){
+            var btn=document.getElementById(id);
+            btn.onclick=fun;
+        }
+        };
+    </script>
+</head>
+<body>
+<button id="btn">1</button>
+
+</body>
+</html>

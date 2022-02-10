@@ -1,0 +1,12 @@
+			.*{
+				margin: 0;
+				padding: 0;
+			}
+			.header{
+				width: 1501px;
+				height:126px;
+				margin: 0 auto;
+			}
+			.header img{border:none}
+			.testIMG{ float:left; display:inline; margin-top:0; margin-left:0px; } 
+			.testTXT{ /* float:right; display:inline; */ margin-top:10px; margin-left:5px; font-size:4px;} 

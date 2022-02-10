@@ -1,0 +1,9 @@
+<script>
+    async function e() {
+        throw new Error('has Error');
+    }
+    e().then(success => console.log('³É¹¦', success))
+        .catch(error => console.log('Ê§°Ü', error));
+    
+
+</script>

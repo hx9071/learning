@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>黑盒英语学习平台</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/header.min.css">
+    <script src="../static/js/jquery-1.11.1.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="testIMG">
+        <img src="../static/img/header.png">
+    </div>
+    <!-- <div class="testTXT">
+        <span>今天也是要努力学习的一天哦~</span>
+    </div> -->
+</div>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a href="#" class="navbar-brand">黑盒英语</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="../static/html/reading" target="mainiframe"> 美文阅读</a></li>
+        <li><a href="../static/templates/blog.html" target="mainiframe">单词</a></li>
+        <li><a href="../static/templates/about.html" target="mainiframe">记事本</a></li>
+    </ul>
+
+</nav>
+
+
+
+<div>
+    <iframe name="mainiframe" src="../static/html/reading.htmlreading.html" id="mainiframe" scrolling="no" onload="resizeFrameHeight()" frameborder="0" width="100%"></iframe>
+</div>
+
+<script type="text/javascript">
+    function resizeFrameHeight(){
+        var ifm = document.getElementById("mainiframe");
+        ifm.height = document.documentElement.clientHeight - 50;
+    }
+
+    window.onresize=function(){
+        resizeFrameHeight();
+    }
+</script>
+</body>
+</html>

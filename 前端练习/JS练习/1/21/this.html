@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    function fun(a,b){
+        console.log(this);
+    }
+
+    var obj = {
+        name:"属性1",
+        sayname:fun
+    };
+    console.log( obj.sayname() == fun());
+
+</script>
+</html>

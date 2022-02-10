@@ -1,0 +1,35 @@
+<script>
+    let clone = [{
+        name: '1',
+        children: [{
+            name: '1 - 1',
+        }]
+    }, {
+        name: '2',
+        children: [{
+            name: '2 - 1', children: [{
+                name: '3 - 1',
+            }]
+        }]
+    }];
+    function clone(target) {
+        let cloneTarget = {};
+        for (const key in target) {
+            cloneTarget[key] = target[key];
+            cloneTarget[key].copy=true;
+            if(cloneTarget[key].children){
+                clone(cloneTarget[key].children)
+            }
+        }
+        return cloneTarget;
+    };
+    // clone(tree);
+    console.log(clone(tree))
+    // function clone(target) {
+    //      let cloneTarget = {};
+    //     for (const key in target) {
+    //          cloneTarget[key] = target[key];
+    //     }
+    //     return target;
+    // };
+</script>

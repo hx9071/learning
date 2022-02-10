@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转数组</title>
+</head>
+
+</html>
+<script>
+    var bianaryMin = function(array) {
+        let left = array[0];
+        let right = array[array.length - 1];
+        let i_left = 0;
+        let i_right = array.length - 1;
+        let mid, min
+        if (left < right) { // 左边比右边的值小 最小值在左边
+            debugger
+            mid = Math.floor((i_left + i_right) / 2);
+            min = array[i_left];
+            while (i_left < i_right) { // 从左边开始遍历
+                if (array[mid] > min) {
+                    i_right = mid
+                }
+                if (array[mid] < min) {
+                    min = array[mid]
+                    i_left = mid - 1
+                }
+            }
+            console.log(min, '最小值1');
+            return min
+        }
+        // if (left > right) { // 左边比右边的值大 最小值在右边
+        //     mid = Math.ceil((i_left + i_right) / 2);
+        //     min = right;
+        //     while (i_left > i_right) { // 从右边边开始遍历
+        //         if (array[mid] > min) {
+        //             i_left = mid
+        //         }
+        //         if (array[mid] < min) {
+        //             min = array[mid]
+        //             i_left = mid - 1
+        //         }
+        //     }
+        //     console.log(min, '最小值2');
+        //     return min
+        // }
+    }
+    console.log(bianaryMin([0, 1, 2, 4, 5, 6]));
+</script>
